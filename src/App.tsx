@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-    <h1>Presidentvalget i USA</h1>
+    <h1>Presidentvalget i US and A</h1>
     {/*<button onClick={handlePost}>Post</button>*/}
     <TextField value={biden_votes} onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
     set_biden_votes(Number(event.target.value));
