@@ -29,8 +29,9 @@ function App() {
 
   return (
     <>
-    <h1>Presidentvalget i USA, her Pål</h1>
+    <h1>Presidentvalget i USA</h1>
     {/*<button onClick={handlePost}>Post</button>*/}
+    <h6></h6>
     <TextField value={biden_votes} onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
     set_biden_votes(Number(event.target.value));
   }}>Hei</TextField>
@@ -44,9 +45,9 @@ function App() {
           <img src={trump} className="logo" alt="React logo" />
       </Stack>
       <Stack direction="row">
-      <Box sx={{"background-color": "#0027E8", "width": biden_percent, "textAlign": "left", "padding": "1em"}}><h1 className="votes">{biden_votes}</h1></Box>
+      <Box sx={{"background-color": "#0027E8", "width": biden_percent, "textAlign": "left", "padding": "1em"}}><h2 className="votes">{biden_votes}</h2></Box>
       {/*<Box sx={{"background-color": "#ADADAD", "width": rest_percent, "padding": "1em"}}><h1 className="votes">{rest}</h1></Box>*/}
-      <Box sx={{"background-color": "#FF003B", "width": trump_percent, "textAlign": "right", "padding": "1em"}}><h1 className="votes">{trump_votes}</h1></Box>
+      <Box sx={{"background-color": "#FF003B", "width": trump_percent, "textAlign": "right", "padding": "1em"}}><h2 className="votes">{trump_votes}</h2></Box>
       
       </Stack>
     </>
