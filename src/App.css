@@ -45,3 +45,19 @@
 .votes {
   color: white;
 }
+
+h2 {
+  font-family: var(--brick-fonts-baseHeadlineM);
+  font-size: var(--brick-fontSizes-baseHeadlineM);
+  font-weight: var(--brick-fontWeights-baseHeadlineM);
+  letter-spacing: var(--brick-letterSpacings-baseHeadlineM);
+  line-height: var(--brick-lineHeights-baseHeadlineM);
+}
+
+.maud {
+  --brick-colors-buttonPrimaryBg: pink;
+  --brick-colors-buttonPrimaryFg: white;
+  --brick-colors-buttonPrimaryBorder: blue;
+  --brick-colors-buttonPrimaryHoverBg: red;
+  --brick-colors-buttonPrimaryHoverBorder: purple;
+}

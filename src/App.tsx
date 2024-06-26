@@ -29,7 +29,20 @@ function App() {
 
   return (
     <>
-    <h1>Presidentvalget i USA</h1>
+    <h2 >Presidentvalget i USA</h2>
+    {/*<div className="maud">
+    <brick-button-v7
+      data-version="primary"
+      data-label="My awesome button">
+    </brick-button-v7>
+    </div>
+    <brick-input-v1
+    data-id="firstname"
+    data-label-text="Firstname"
+    data-label-hidden="true"
+    data-required="true"
+    data-type="text"
+  ></brick-input-v1> */}
     {/*<button onClick={handlePost}>Post</button>*/}
     <h6></h6>
     <TextField value={biden_votes} onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
