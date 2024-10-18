@@ -1,14 +1,12 @@
-import { useState } from "react";
 import trump from './Trump.png';
 import biden from './Harris.png';
 import './App.css';
 import { Box, Stack } from "@mui/system";
-import { TextField } from "@mui/material";
 
 function App() {
 
-  const [biden_votes, set_biden_votes] = useState(333);
-  const [trump_votes, set_trump_votes] = useState(201);
+  const biden_votes = 333
+  const trump_votes = 201
 
   // let rest_percent = rest.toString()+"%";
   let trump_percent = trump_votes.toString()+"%";

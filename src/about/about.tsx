@@ -1,21 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import trump from './trumpface.png';
-import biden from './bidenface.png';
 import "./about.css";
 
-const lenke = "https://services.api.no/api/content/search/acp?&sort=-published&limit=80&q=allOf(_links.publication.title=www.nettavisen.no,published%3E=2024-08-18,not(metadata.categories.name=Trav,metadata.categories.name=Sportspill,metadata.categories.isCommercial=true))"
+// const lenke = "https://services.api.no/api/content/search/acp?&sort=-published&limit=80&q=allOf(_links.publication.title=www.nettavisen.no,published%3E=2024-08-18,not(metadata.categories.name=Trav,metadata.categories.name=Sportspill,metadata.categories.isCommercial=true))"
 
-const response = await fetch(lenke);
+// const response = await fetch(lenke);
 
-const data = await response.json();
+// const data = await response.json();
 
-const articles = data.results;
+// const articles = data.results;
 
-articles.map(article => {
+{
+/*
+articles.map(article: any => {
     (article.model === "story") &&
     console.log(article.title);
 })
+*/}
 
 /* console.log(data) */
 
@@ -25,10 +26,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <div className="container2">
     <div className='scroll'>
-    { articles.map(article => {
+    {/* articles.map(article => {
     if (article.model === "story") {
     return (<div className="item">{article.title}</div>);}
-    })}
+    })*/}
     </div>
 </div>
     <div className="container">
