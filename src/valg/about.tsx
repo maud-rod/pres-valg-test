@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+
+console.log("blirjeg kjøprt?")
+
 /* i stedet for root, mer beskrivende navn */
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

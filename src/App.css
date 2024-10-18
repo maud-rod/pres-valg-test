@@ -6,7 +6,7 @@
 }
 
 .logo {
-  height: 15em;
+  height: 10em;
 }
 
 .space {
@@ -29,13 +29,13 @@
 }
 
 .card-trump {
-  padding: 1em;
   background-color: red;
+  height: 3em;
 }
 
 .card-biden {
-  padding: 1em;
   background-color: blue;
+  height: 3em;
 }
 
 .read-the-docs {
@@ -44,6 +44,7 @@
 
 .votes {
   color: white;
+  font-size: 2em;
 }
 
 h2 {
