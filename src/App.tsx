@@ -3,7 +3,6 @@ import biden from './Harris.png';
 import './App.css';
 import { Box, Stack } from "@mui/system";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Question from './components/Question';
 import Valgomat from './components/Valgomat';
 
 function App() {
