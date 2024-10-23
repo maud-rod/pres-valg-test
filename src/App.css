@@ -30,13 +30,24 @@
 
 .card-trump {
   background-color: red;
-  height: 3em;
 }
 
 .card-biden {
   background-color: blue;
-  height: 3em;
 }
+
+.vline
+{
+    position:fixed;
+    top:55%;
+    left:50%;
+    bottom:0; margin:0;
+    border:none;
+    border-right:solid 2px black;
+    z-index:10;
+    height: 49px;
+}
+
 
 .read-the-docs {
   color: #888;
@@ -53,6 +64,23 @@ h2 {
   font-weight: var(--brick-fontWeights-baseHeadlineM);
   letter-spacing: var(--brick-letterSpacings-baseHeadlineM);
   line-height: var(--brick-lineHeights-baseHeadlineM);
+}
+
+
+.MuiTypography-h3 {
+  font-family: var(--brick-fonts-baseHeadlineS);
+  font-size: var(--brick-fontSizes-baseHeadlineS);
+  font-weight: var(--brick-fontWeights-baseHeadlineM);
+  letter-spacing: var(--brick-letterSpacings-baseHeadlineM);
+  line-height: var(--brick-lineHeights-baseHeadlineM);
+}
+
+h4 {
+  font-family: var(--brick-fonts-baseHeadlineS);
+  font-size: var(--brick-fontSizes-baseHeadlineS);
+  font-weight: var(--brick-fontWeights-baseHeadlineM);
+  letter-spacing: var(--brick-letterSpacings-baseHeadlineS);
+  line-height: var(--brick-lineHeights-baseHeadlineS);
 }
 
 .maud {
