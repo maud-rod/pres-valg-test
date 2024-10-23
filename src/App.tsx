@@ -96,7 +96,7 @@ function App() {
 </Stack><Tooltip
       onClose={() => toggleClick(false)}
       open={openTooltip}
-      title={<h4>Mandatene i hver stat tildeles kandidaten med høyeste snitt basert på målingene til FiveThirtyEight.</h4>}
+      title={<h4>Mandatene i hver stat tildeles kandidaten med høyeste snitt i FiveThirtyEights snitt av målinger.</h4>}
       arrow
       PopperProps={{
         disablePortal: true
@@ -108,7 +108,7 @@ function App() {
         style={{ width: 20, height: 20, padding: 20 }}
         onClick={() => toggleClick(true)}
         color="primary"
-      />
+      >Info</InfoIcon>
     </Tooltip></>)
 
   return (
