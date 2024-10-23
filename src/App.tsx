@@ -4,8 +4,8 @@ import './App.css';
 import { Box, Stack } from "@mui/system";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Valgomat from './components/Valgomat';
-import { Icon, IconButton, SvgIcon, Tooltip, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import { Tooltip } from '@mui/material';
+import { useState } from 'react';
 import InfoIcon from '@mui/icons-material/Info';
 
 function App() {
