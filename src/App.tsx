@@ -81,11 +81,11 @@ function App() {
       setResponse(data);
   }; */}
 
-  const h = 120;
+  const h = 140;
   const w = 1.86*h;
 
   const defaultPage = (
-    <Stack direction="column" width="480px">
+    <Stack direction="column" width="540px">
     <Stack direction="row" width="100%">
         <img src={biden} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <div className="space"/>
