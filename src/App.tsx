@@ -1,6 +1,7 @@
 import trump from './Trump.png';
 import biden from './Harris.png';
 import './App.css';
+import'../src/components/Valgomat.css';
 import { Box, Stack } from "@mui/system";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Valgomat from './components/Valgomat';
@@ -80,11 +81,15 @@ function App() {
       setResponse(data);
   }; */}
 
-  const defaultPage = (<>
+  const h = 120;
+  const w = 1.86*h;
+
+  const defaultPage = (
+    <Stack direction="column" width="480px">
     <Stack direction="row" width="100%">
-        <img src={biden} className="logo" alt="Harris" />
+        <img src={biden} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <div className="space"/>
-        <img src={trump} className="logo" alt="Trump" />
+        <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
       </Stack>
       <Stack direction="row" alignItems="center" width="100%">
       <Box sx={{"background-color": "#0027E8", "width": biden_percent, "textAlign": "left", "height": "15px", "padding": "1em", "justifyItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{biden_votes}</h2></Box>
@@ -109,7 +114,7 @@ function App() {
         onClick={() => toggleClick(true)}
         color="primary"
       >Info</InfoIcon>
-    </Tooltip></>)
+    </Tooltip></Stack>)
 
   return (
     <Router>

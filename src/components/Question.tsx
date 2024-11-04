@@ -19,21 +19,21 @@ function Question({questionString, pointDistribution, onKamalaScoreUpdated, onDo
 
 
     return <Stack direction="column" gap={1} alignItems={"center"}>
-        <Typography color="black" variant="h4">{questionString}</Typography>
+        <Typography color="black" variant="h4" sx={{"font-family": "var(--brick-fonts-baseHeadlineS)"}}>{questionString}</Typography>
 
         <Stack direction="row" gap={1}>
             <Button onClick={() => {
                 onAlternativeSelected(0)
-                }}>Helt uenig</Button>
+                }}><Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)"}}>Helt uenig</Typography></Button>
             <Button onClick={() => {
                 onAlternativeSelected(1)
-                }}>Litt uenig</Button>
+            }}><Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)"}}>Litt uenig</Typography></Button>
             <Button onClick={() => {
                 onAlternativeSelected(2)
-                }}>Litt enig</Button>
+            }}><Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)"}}>Litt enig</Typography></Button>
             <Button onClick={() => {
                 onAlternativeSelected(3)
-                }}>Helt enig</Button>
+            }}><Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)"}}>Helt enig</Typography></Button>
         </Stack>
 
     </Stack>

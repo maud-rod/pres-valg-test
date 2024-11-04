@@ -1,0 +1,7 @@
+h4 {
+    font-family: var(--brick-fonts-baseHeadlineS);
+    font-size: var(--brick-fontSizes-baseHeadlineS);
+    font-weight: var(--brick-fontWeights-baseHeadlineM);
+    letter-spacing: var(--brick-letterSpacings-baseHeadlineS);
+    line-height: var(--brick-lineHeights-baseHeadlineS);
+  }
