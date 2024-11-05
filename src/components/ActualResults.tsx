@@ -3,7 +3,7 @@ import { USMap } from './USmap.tsx';
 import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { FormControlLabel, FormGroup, Switch } from '@mui/material';
+import { FormControlLabel, FormGroup, Switch, Typography } from '@mui/material';
 import { useState } from 'react';
 import PredictedResults from './PredictedResult.tsx';
 import { useSearchParams } from 'react-router-dom';
@@ -12,8 +12,6 @@ function ActualResults() {
 
     const [searchParams, _] = useSearchParams();
     let forside = searchParams.get("forside") === "true";
-
-    console.log(forside, "iiiiiiiii");
 
   const wisconsin = 10;
   const michigan = 15;
@@ -34,8 +32,6 @@ function ActualResults() {
 
   let trump_states = [pennsylvania, north_carolina, georgia, arizona]
 
-  console.log(harris_states, trump_states)
-
   let harris_mandates = 0
 
   /*
@@ -50,8 +46,6 @@ function ActualResults() {
   trump_states.forEach( num => {
     trump_mandates += num;
   }) */
-
-  console.log(trump_mandates, harris_mandates)
 
   // 404 utenom det
 
@@ -76,8 +70,6 @@ function ActualResults() {
   let trump_overweight_percent = trump_overweight > 0 ? (100*(trump_overweight)).toString()+"%" : "0%";
   let harris_overweight_percent =  harris_overweight > 0 ? (100*(harris_overweight)).toString()+"%" : "0%";
 
-  console.log(harris_percent, trump_percent, greyharrisPercent, greyTrumpPercent, trump_overweight_percent, harris_overweight_percent)
-
   {/* const [response, setResponse] = useState(null);
 
   const handlePost = async () => {
@@ -100,9 +92,6 @@ function ActualResults() {
 
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
-  console.log(borderHarrisGrey)
-
-
   const defaultPage = (
     <Stack direction="column" width="540px">
     {predicted ? <PredictedResults /> : <><Stack direction="row" width="100%">
@@ -124,9 +113,18 @@ function ActualResults() {
     <USMap predicted={predicted}/></>}
 
     {forside &&
+    (<Stack direction="column"><Stack direction="row" alignItems="center" spacing={2}>
         <FormGroup>
-    <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label="Vis forventede resultater" sx={{"color": "black"}}/>
-    </FormGroup>}
+    <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater </Typography> } />
+    </FormGroup>
+
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 5. november, 21:19</Typography> 
+    </Stack> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/">AP News</a> </Typography>
+
+    </Stack>)
+    }
     
     </Stack>)
 

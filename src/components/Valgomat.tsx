@@ -30,8 +30,6 @@ function Valgomat() {
          </Typography>
         </Stack>
     }
-    console.log(scoreKamala,scoreDonald)
-
 
     return <>
     <img src={harris} className="logo" alt="Harris" />

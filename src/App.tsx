@@ -34,8 +34,6 @@ function App() {
 
   let trump_states = [pennsylvania, north_carolina, georgia, arizona]
 
-  console.log(harris_states, trump_states)
-
   let harris_mandates = 181
 
   harris_states.forEach( num => {
@@ -47,8 +45,6 @@ function App() {
   trump_states.forEach( num => {
     trump_mandates += num;
   })
-
-  console.log(trump_mandates, harris_mandates)
 
   // 404 utenom det
 
@@ -72,8 +68,6 @@ function App() {
 
   let trump_overweight_percent = trump_overweight > 0 ? (100*(trump_overweight)).toString()+"%" : "0%";
   let harris_overweight_percent =  harris_overweight > 0 ? (100*(harris_overweight)).toString()+"%" : "0%";
-
-  console.log(harris_percent, trump_percent, greyharrisPercent, greyTrumpPercent, trump_overweight_percent, harris_overweight_percent)
 
   const [openTooltip, setOpenTooltipValue] = useState(false);
 
@@ -100,8 +94,6 @@ function App() {
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px black";
 
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
-
-  console.log(borderHarrisGrey)
 
   const defaultPage = (
     <Stack direction="column" width="540px">
