@@ -6,9 +6,10 @@ import { Box, Stack } from "@mui/system";
 
 type Props = {
     isMobile: boolean;
+    isForside: boolean;
 }
 
-const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
+const PredictedResults: React.FC<Props> = ({isMobile, isForside}: Props) => {
 
     let light_blue = "#b5beff"
     let light_red = "#ff9696"
@@ -39,7 +40,7 @@ const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
 
   const h = isMobile ? 70 : 140;
   const w = 1.86*h;
-  const boxWidth = isMobile ? "340px": "700px"
+  const boxWidth = isMobile ? "340px": (isForside ? "700px" : "540px")
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
@@ -63,7 +64,7 @@ const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
       <Box sx={{"background-color": light_red, "height": "15px","width": trump_percent, "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_predicted}</h2></Box>
     </Stack>
 
-    <USMap predicted={true} isMobile={isMobile}/>
+    <USMap predicted={true} isMobile={isMobile} isForside={true}/>
     
     </Stack>)
 

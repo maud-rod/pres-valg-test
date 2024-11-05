@@ -24,6 +24,8 @@ function ActualResults() {
     const [searchParams, _] = useSearchParams();
     let forside = searchParams.get("forside") === "true";
 
+    let isForside = forside;
+
     /*
   const wisconsin = 10;
   const michigan = 15;
@@ -100,15 +102,15 @@ function ActualResults() {
 
   const h = isMobile ? 70 : 140;
   const w = 1.86*h;
-  const boxWidth = isMobile ? "340px": "700px"
+  const boxWidth = isMobile ? "340px": (isForside ? "700px" : "540px");
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
   const defaultPage = (
-    <Stack direction="column" width={boxWidth}>
-    {predicted ? <PredictedResults isMobile={isMobile}/> : <><Stack direction="row" width="100%" justifyContent="space-between">
+    <Stack direction="column" width={boxWidth} sx={{backgroundColor: forside ? "#e5e5e5" : "white"}}>
+    {predicted ? <PredictedResults isMobile={isMobile} isForside={isForside}/> : <><Stack direction="row" width="100%" justifyContent="space-between">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
       </Stack>
@@ -123,23 +125,25 @@ function ActualResults() {
     </Stack>
     
 
-    <USMap predicted={predicted} isMobile={isMobile}/></>}
+    <USMap predicted={predicted} isMobile={isMobile} isForside={isForside}/></>}
 
-    {forside &&
-    (<Stack direction="column"><Stack direction="row" alignItems="center" padding={2} justifyContent="space-between">
+    <Stack direction="column">
+
+    {forside ?
+    <Stack direction="row" alignItems="center" padding={2} justifyContent="space-between">
         <FormGroup>
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater </Typography> } />
     </FormGroup>
-
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 5. november, 21:19</Typography> 
-    </Stack> 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/">AP News</a> </Typography>
-
-    </Stack>)
+    </Stack>  : 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 5. november, 21:19</Typography>
     }
-    
-    </Stack>)
+
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/">AP News</a> </Typography>    
+    </Stack>
+    </Stack>
+  )
 
   return defaultPage
 
