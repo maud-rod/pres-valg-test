@@ -13,6 +13,7 @@ function ActualResults() {
     const [searchParams, _] = useSearchParams();
     let forside = searchParams.get("forside") === "true";
 
+    /*
   const wisconsin = 10;
   const michigan = 15;
   const nevada = 6;
@@ -31,6 +32,7 @@ function ActualResults() {
   let harris_states = [wisconsin,michigan, nevada, minnesota, new_hampshire, neb2dist, virginia, new_mex, maine, colorado]
 
   let trump_states = [pennsylvania, north_carolina, georgia, arizona]
+  */
 
   let harris_mandates = 0
 
