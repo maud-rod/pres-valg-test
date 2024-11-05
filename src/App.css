@@ -1,8 +1,10 @@
 #root {
   max-width: 800px;
+  width: "100vh";
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(245, 245, 245);
 }
 
 .space {
