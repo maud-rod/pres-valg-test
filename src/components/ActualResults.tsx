@@ -4,11 +4,22 @@ import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
 import { FormControlLabel, FormGroup, Switch, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PredictedResults from './PredictedResult.tsx';
 import { useSearchParams } from 'react-router-dom';
 
 function ActualResults() {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    const getIsMobile = (userAgent: string) =>
+    !!userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    );
+
+    useEffect(() => {
+        setIsMobile(getIsMobile(navigator.userAgent));
+    }, []);
 
     const [searchParams, _] = useSearchParams();
     let forside = searchParams.get("forside") === "true";
@@ -87,16 +98,17 @@ function ActualResults() {
 
   const [predicted, setPredicted] = useState(false);
 
-  const h = 140;
+  const h = isMobile ? 80 : 140;
   const w = 1.86*h;
+  const boxWidth = isMobile ? "380px": "700px"
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
   const defaultPage = (
-    <Stack direction="column" width="540px">
-    {predicted ? <PredictedResults /> : <><Stack direction="row" width="100%">
+    <Stack direction="column" width={boxWidth}>
+    {predicted ? <PredictedResults isMobile={isMobile}/> : <><Stack direction="row" width="100%">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <div className="space"/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
@@ -112,7 +124,7 @@ function ActualResults() {
     </Stack>
     
 
-    <USMap predicted={predicted}/></>}
+    <USMap predicted={predicted} isMobile={isMobile}/></>}
 
     {forside &&
     (<Stack direction="column"><Stack direction="row" alignItems="center" spacing={2}>

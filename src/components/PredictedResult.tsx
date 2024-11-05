@@ -4,7 +4,11 @@ import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
 
-function PredictedResults() {
+type Props = {
+    isMobile: boolean;
+}
+
+const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
 
     let light_blue = "#b5beff"
     let light_red = "#ff9696"
@@ -33,8 +37,9 @@ function PredictedResults() {
 
   console.log(harris_percent, trump_percent, greyharrisPercent, greyTrumpPercent, trump_overweight_percent, harris_overweight_percent)
 
-  const h = 140;
+  const h = isMobile ? 80 : 140;
   const w = 1.86*h;
+  const boxWidth = isMobile ? "380px": "700px"
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
@@ -43,7 +48,7 @@ function PredictedResults() {
   console.log(harrisPercent,"maud")
 
   const defaultPage = (
-    <Stack direction="column" width="540px">
+    <Stack direction="column" width={boxWidth}>
     <Stack direction="row" width="100%">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <div className="space"/>
@@ -59,7 +64,7 @@ function PredictedResults() {
       <Box sx={{"background-color": light_red, "height": "15px","width": trump_percent, "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_predicted}</h2></Box>
     </Stack>
 
-    <USMap predicted={true}/>
+    <USMap predicted={true} isMobile={isMobile}/>
     
     </Stack>)
 
