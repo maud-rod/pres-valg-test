@@ -98,9 +98,9 @@ function ActualResults() {
 
   const [predicted, setPredicted] = useState(false);
 
-  const h = isMobile ? 80 : 140;
+  const h = isMobile ? 70 : 140;
   const w = 1.86*h;
-  const boxWidth = isMobile ? "380px": "700px"
+  const boxWidth = isMobile ? "340px": "700px"
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
@@ -108,9 +108,8 @@ function ActualResults() {
 
   const defaultPage = (
     <Stack direction="column" width={boxWidth}>
-    {predicted ? <PredictedResults isMobile={isMobile}/> : <><Stack direction="row" width="100%">
+    {predicted ? <PredictedResults isMobile={isMobile}/> : <><Stack direction="row" width="100%" justifyContent="space-between">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
-        <div className="space"/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
       </Stack>
       <Stack direction="row" alignItems="center" width="100%">
@@ -127,7 +126,7 @@ function ActualResults() {
     <USMap predicted={predicted} isMobile={isMobile}/></>}
 
     {forside &&
-    (<Stack direction="column"><Stack direction="row" alignItems="center" spacing={2}>
+    (<Stack direction="column"><Stack direction="row" alignItems="center" padding={2} justifyContent="space-between">
         <FormGroup>
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater </Typography> } />

@@ -37,9 +37,9 @@ const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
 
   console.log(harris_percent, trump_percent, greyharrisPercent, greyTrumpPercent, trump_overweight_percent, harris_overweight_percent)
 
-  const h = isMobile ? 80 : 140;
+  const h = isMobile ? 70 : 140;
   const w = 1.86*h;
-  const boxWidth = isMobile ? "380px": "700px"
+  const boxWidth = isMobile ? "340px": "700px"
 
   const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
@@ -49,9 +49,8 @@ const PredictedResults: React.FC<Props> = ({isMobile}: Props) => {
 
   const defaultPage = (
     <Stack direction="column" width={boxWidth}>
-    <Stack direction="row" width="100%">
+    <Stack direction="row" width="100%" justifyContent="space-between">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
-        <div className="space"/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
       </Stack>
       <Stack direction="row" alignItems="center" width="100%">
