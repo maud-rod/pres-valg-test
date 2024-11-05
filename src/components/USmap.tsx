@@ -1,11 +1,11 @@
 import React from "react";
 
-const stateToCandidate = {
+/* const stateToCandidate = {
     Massachusetts: "unknown",
     Minnesota: "Trump",
     Montana: "Harris"
 
-}
+} */
 
 export const USMap: React.FC = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="540px" viewBox="135,0 870,589">

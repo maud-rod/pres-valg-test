@@ -10,7 +10,7 @@ import InfoIcon from '@mui/icons-material/Info';
 function ActualResults() {
 
   const harris_votes = 257
-  const trump_votes = 281
+  // const trump_votes = 281
 
   const wisconsin = 10;
   const michigan = 15;
