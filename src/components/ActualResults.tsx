@@ -3,14 +3,14 @@ import { USMap } from './USmap.tsx';
 import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { Tooltip } from '@mui/material';
+import { FormControlLabel, FormGroup, Switch, ToggleButton, Tooltip } from '@mui/material';
 import { useState } from 'react';
-import InfoIcon from '@mui/icons-material/Info';
+import PredictedResults from './PredictedResult.tsx';
 
 function ActualResults() {
 
-  const harris_votes = 257
-  // const trump_votes = 281
+  const harris_predicted = 226
+  const trump_predicted = 219
 
   const wisconsin = 10;
   const michigan = 15;
@@ -33,18 +33,20 @@ function ActualResults() {
 
   console.log(harris_states, trump_states)
 
-  let harris_mandates = 181
+  let harris_mandates = 0
 
+  /*
   harris_states.forEach( num => {
     harris_mandates += num;
   })
+  */ 
 
-  let trump_mandates = 219
-  trump_mandates = 100;
+  let trump_mandates = 0
 
+  /*
   trump_states.forEach( num => {
     trump_mandates += num;
-  })
+  }) */
 
   console.log(trump_mandates, harris_mandates)
 
@@ -92,52 +94,41 @@ function ActualResults() {
       setResponse(data);
   }; */}
 
+  const [predicted, setPredicted] = useState(false);
+
   const h = 140;
   const w = 1.86*h;
 
-  const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px black";
+  const borderHarrisGrey = trump_overweight > 0 ? "none" : "solid 2px white";
 
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
   console.log(borderHarrisGrey)
 
+
   const defaultPage = (
     <Stack direction="column" width="540px">
-    <Stack direction="row" width="100%">
+    {predicted ? <PredictedResults /> : <><Stack direction="row" width="100%">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <div className="space"/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
       </Stack>
       <Stack direction="row" alignItems="center" width="100%">
-      <Box sx={{"background-color": "#0027E8", "width": harrisPercent, "textAlign": "left", "height": "15px", "padding": "1em", "justifyItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{harris_votes}</h2></Box>
+      <Box sx={{"background-color": (harris_mandates < 1) ? "#AAAAAA" : "#0027E8", "width": (harris_mandates > 30) ? harrisPercent : "undefined", "textAlign": "left", "height": "15px", "padding": "1em", "justifyItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{harris_mandates}</h2></Box>
       <Box sx={{"background-color": "#AAAAAA", "width": greyharrisPercent, "height": "47px", borderRight: borderHarrisGrey}} />
-      {trump_overweight > 0 && <Box sx={{"background-color": "#FF003B", "width": trump_overweight_percent,"borderRight": "solid 2px black", "height": "47px"}} />}
-      {harris_overweight > 0 && <Box sx={{"background-color": "#0027E8", "width": harris_overweight_percent,"borderLeft": "solid 2px black", "height": "47px"}} />}
+      {trump_overweight > 0 && <Box sx={{"background-color": "#FF003B", "width": trump_overweight_percent,"borderRight": "solid 2px white", "height": "47px"}} />}
+      {harris_overweight > 0 && <Box sx={{"background-color": "#0027E8", "width": harris_overweight_percent,"borderLeft": "solid 2px white", "height": "47px"}} />}
       <Box sx={{"background-color": "#AAAAAA", "width": greyTrumpPercent, "height": "47px"}} />
       {/*<Box sx={{"background-color": "#FF003B", "width": trump_overweight,"borderRight": "solid 2px black", "height": "47px"}} />*/}
-      <Box sx={{"background-color": "#FF003B", "height": "15px","width": trump_percent, "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_mandates}</h2></Box>
+      <Box sx={{"background-color": (trump_mandates < 1) ? "#AAAAAA" : "#FF003B", "height": "15px","width": (trump_mandates > 30) ? trump_percent : "undefined", "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_mandates}</h2></Box>
+    </Stack>
+    
 
+    <USMap predicted={predicted}/></>}
 
-
-</Stack><Tooltip
-      onClose={() => toggleClick(false)}
-      open={openTooltip}
-      title={<h4>Mandatene i hver stat tildeles kandidaten med høyeste snitt i FiveThirtyEights snitt av målinger.</h4>}
-      arrow
-      PopperProps={{
-        disablePortal: true
-      }}
-      disableFocusListener
-      disableTouchListener
-    >
-      <InfoIcon
-        style={{ width: 20, height: 20, padding: 20 }}
-        onClick={() => toggleClick(true)}
-        color="primary"
-      >Info</InfoIcon>
-    </Tooltip>
-
-    <USMap />
+    <FormGroup>
+  <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label="Vis forventede resultater" sx={{"color": "black"}}/>
+</FormGroup>
     
     </Stack>)
 
