@@ -1,16 +1,13 @@
-import trump from './Trump.png';
-import harris from './Harris.png';
-import './App.css';
-import'../src/components/Valgomat.css';
+import trump from '../Trump.png';
+import { USMap } from './USmap.tsx';
+import harris from '../Harris.png';
+import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Valgomat from './components/Valgomat';
 import { Tooltip } from '@mui/material';
 import { useState } from 'react';
 import InfoIcon from '@mui/icons-material/Info';
-import ActualResults from './components/ActualResults';
 
-function App() {
+function ActualResults() {
 
   const harris_votes = 257
   const trump_votes = 281
@@ -43,6 +40,7 @@ function App() {
   })
 
   let trump_mandates = 219
+  trump_mandates = 100;
 
   trump_states.forEach( num => {
     trump_mandates += num;
@@ -117,7 +115,7 @@ function App() {
       {harris_overweight > 0 && <Box sx={{"background-color": "#0027E8", "width": harris_overweight_percent,"borderLeft": "solid 2px black", "height": "47px"}} />}
       <Box sx={{"background-color": "#AAAAAA", "width": greyTrumpPercent, "height": "47px"}} />
       {/*<Box sx={{"background-color": "#FF003B", "width": trump_overweight,"borderRight": "solid 2px black", "height": "47px"}} />*/}
-      <Box sx={{"background-color": "#FF003B", "height": "15px","width": trump_percent, "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_votes}</h2></Box>
+      <Box sx={{"background-color": "#FF003B", "height": "15px","width": trump_percent, "textAlign": "right", "padding": "1em", "alignItems": "center"}}><h2 className="votes" style={{"marginTop": "-12px"}}>{trump_mandates}</h2></Box>
 
 
 
@@ -137,18 +135,15 @@ function App() {
         onClick={() => toggleClick(true)}
         color="primary"
       >Info</InfoIcon>
-    </Tooltip></Stack>)
+    </Tooltip>
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={defaultPage} />
-        <Route path="/valgomat" element={<Valgomat/>}/>
-        <Route path="/actual" element={<ActualResults/>}/>
-      </Routes>
+    <USMap />
     
-      </Router>
-  )
+    </Stack>)
+
+  return defaultPage
+
+  
 }
 
-export default App
+export default ActualResults;

@@ -18,6 +18,18 @@
   }
 }
 
+svg {
+	color: white;
+	display: block;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+a:hover {
+	color: #a00;
+	transition: color 0s;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
