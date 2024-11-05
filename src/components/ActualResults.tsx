@@ -3,14 +3,17 @@ import { USMap } from './USmap.tsx';
 import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { FormControlLabel, FormGroup, Switch, ToggleButton, Tooltip } from '@mui/material';
+import { FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { useState } from 'react';
 import PredictedResults from './PredictedResult.tsx';
+import { useSearchParams } from 'react-router-dom';
 
 function ActualResults() {
 
-  const harris_predicted = 226
-  const trump_predicted = 219
+    const [searchParams, _] = useSearchParams();
+    let forside = searchParams.get("forside") === "true";
+
+    console.log(forside, "iiiiiiiii");
 
   const wisconsin = 10;
   const michigan = 15;
@@ -75,12 +78,6 @@ function ActualResults() {
 
   console.log(harris_percent, trump_percent, greyharrisPercent, greyTrumpPercent, trump_overweight_percent, harris_overweight_percent)
 
-  const [openTooltip, setOpenTooltipValue] = useState(false);
-
-  const toggleClick = (bool: boolean) => {
-    setOpenTooltipValue(bool);
-  };
-
   {/* const [response, setResponse] = useState(null);
 
   const handlePost = async () => {
@@ -126,9 +123,10 @@ function ActualResults() {
 
     <USMap predicted={predicted}/></>}
 
-    <FormGroup>
-  <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label="Vis forventede resultater" sx={{"color": "black"}}/>
-</FormGroup>
+    {forside &&
+        <FormGroup>
+    <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label="Vis forventede resultater" sx={{"color": "black"}}/>
+    </FormGroup>}
     
     </Stack>)
 

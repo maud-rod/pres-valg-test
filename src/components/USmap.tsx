@@ -18,8 +18,7 @@ export const USMap: React.FC<Props> = ({predicted}: Props) =>
     {
         let light_blue = !predicted ? "#BBBBBB" : "#b5beff"
         let light_red = !predicted ? "#BBBBBB": "#ff9696"
-        const blue = "blue"
-        const red = "red"
+
         console.log(predicted)
         return (
     <svg xmlns="http://www.w3.org/2000/svg" width="540px" viewBox="135,0 870,589">
