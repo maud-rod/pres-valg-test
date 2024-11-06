@@ -97,13 +97,13 @@ function ActualResults() {
     const West_Virginia = 4;
     // const Alaska = 3;
     const Delaware = 3;
-    // const DC = 3;
+    const DC = 3;
     const North_Dakota = 3;
     const South_Dakota = 3;
     const Vermont = 3;
     const Wyoming = 3;
 
-  let harris_states = [Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
+  let harris_states = [DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
   let trump_states = [Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_1, West_Virginia, ]
 
@@ -192,9 +192,9 @@ function ActualResults() {
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater (per 5.11.24) </Typography> } />
     </FormGroup>
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:12</Typography> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:25</Typography> 
     </Stack>  : 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:12</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:25</Typography>
     }
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
