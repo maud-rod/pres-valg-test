@@ -19,8 +19,8 @@ type Props = {
 
 export const USMap: React.FC<Props> = ({predicted, isMobile, isForside}: Props) => 
     {
-        let light_blue = !predicted ? "#BBBBBB" : "#b5beff"
-        let light_red = !predicted ? "#BBBBBB": "#ff9696"
+        // let light_blue = !predicted ? "#BBBBBB" : "#b5beff"
+        // let light_red = !predicted ? "#BBBBBB": "#ff9696"
         let blue = "#0027E8";
         let red = "#FF003B";
 
