@@ -26,43 +26,100 @@ function ActualResults() {
 
     let isForside = forside;
 
-    /*
-  const wisconsin = 10;
-  const michigan = 15;
-  const nevada = 6;
-  const pennsylvania = 19;
-  const north_carolina = 16;
-  const georgia = 16;
-  const arizona = 11;
-  const minnesota = 10;
-  const neb2dist = 1;
-  const virginia = 13;
-  const new_hampshire = 4;
-  const new_mex = 5;
-  const maine = 2;
-  const colorado = 10;
+    // const California = 54;
 
-  let harris_states = [wisconsin,michigan, nevada, minnesota, new_hampshire, neb2dist, virginia, new_mex, maine, colorado]
+    const Texas = 40;
 
-  let trump_states = [pennsylvania, north_carolina, georgia, arizona]
-  */
+    const Florida = 30;
+
+    const New_York = 28;
+
+    const Illinois = 19;
+
+    // const Pennsylvania = 19;
+
+    const Ohio = 17;
+
+    // const Georgia = 16;
+
+    // const North_Carolina = 16;
+
+    // const Michigan = 15;
+
+    const New_Jersey = 14;
+
+    // const Virginia = 13;
+
+    // const Washington = 12;
+
+    // const Arizona = 11;
+
+    const Indiana = 11;
+
+    const Massachusetts = 11;
+
+    const Tennessee = 11;
+
+    // const Colorado = 10;
+
+    const Maryland = 10;
+
+    // const Minnesota = 10;
+
+    // const Missouri = 10;
+
+    // const Wisconsin = 10;
+
+    const Alabama = 9;
+    const South_Carolina = 9;
+    const Kentucky = 8;
+    const Louisiana = 8;
+    // const Oregon = 8;
+    const Connecticut = 7;
+    const Oklahoma = 7;
+    const Arkansas = 6;
+    // const Iowa = 6;
+    // const Kansas = 6;
+    const Mississippi = 6;
+    // const Nevada = 6;
+    // const Utah = 6;
+    const Nebraska = 2;
+    // const Nebraska_1 = 1;
+    // const Nebraska_2 = 1;
+    // const Nebraska_3 = 1;
+    // const New_Mexico = 5;
+    // const Hawaii = 4;
+    // const Idaho = 4;
+    // const Maine = 4;
+    // const Montana = 4;
+    // const New_Hampshire = 4;
+    const Rhode_Island = 4;
+    const West_Virginia = 4;
+    // const Alaska = 3;
+    const Delaware = 3;
+    // const DC = 3;
+    const North_Dakota = 3;
+    const South_Dakota = 3;
+    const Vermont = 3;
+    const Wyoming = 3;
+
+  let harris_states = [Vermont, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
+
+  let trump_states = [Texas, Ohio, Florida, Alabama, Mississippi, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Wyoming, West_Virginia, ]
 
   let harris_mandates = 0
 
-  /*
   harris_states.forEach( num => {
     harris_mandates += num;
   })
-  */ 
 
   let trump_mandates = 0
 
-  /*
   trump_states.forEach( num => {
     trump_mandates += num;
-  }) */
+  })
 
-  // 404 utenom det
+  console.log(harris_mandates, trump_mandates)
 
 
   // let rest_percent = rest.toString()+"%";
