@@ -168,7 +168,7 @@ function ActualResults() {
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
   const defaultPage = (
-    <Stack direction="column" width={boxWidth} sx={{backgroundColor: !forside ? "transparent" : "transparent"}} padding={2}>
+    <Stack direction="column" width={boxWidth} sx={{backgroundColor: "transparent"}} padding={2}>
     {predicted ? <PredictedResults isMobile={isMobile} isForside={isForside}/> : <><Stack direction="row" width="100%" justifyContent="space-between">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
