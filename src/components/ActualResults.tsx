@@ -3,7 +3,7 @@ import { USMap } from './USmap.tsx';
 import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { FormControlLabel, FormGroup, Switch, Typography } from '@mui/material';
+import { FormGroup, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import PredictedResults from './PredictedResult.tsx';
 import { useSearchParams } from 'react-router-dom';
