@@ -90,14 +90,14 @@ function ActualResults() {
     const New_Mexico = 5;
     const Hawaii = 4;
     const Idaho = 4;
-    // const Maine = 2;
+    const Maine = 2;
     const Maine_dist = 1;
     const Maine_dist2 = 1;
     const Montana = 4;
     const New_Hampshire = 4;
     const Rhode_Island = 4;
     const West_Virginia = 4;
-    // const Alaska = 3;
+    const Alaska = 3;
     const Delaware = 3;
     const DC = 3;
     const North_Dakota = 3;
@@ -105,9 +105,9 @@ function ActualResults() {
     const Vermont = 3;
     const Wyoming = 3;
 
-  let harris_states = [Minnesota, New_Hampshire, Nebraska_2, Hawaii, Virginia, New_Mexico, Oregon, California, Washington, Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
+  let harris_states = [Maine, Minnesota, New_Hampshire, Nebraska_2, Hawaii, Virginia, New_Mexico, Oregon, California, Washington, Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
-  let trump_states = [Michigan, Wisconsin, Pennsylvania, Maine_dist2, Nebraska_1, Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
+  let trump_states = [Alaska, Michigan, Wisconsin, Pennsylvania, Maine_dist2, Nebraska_1, Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
 
   let harris_mandates = 0
 
@@ -188,7 +188,7 @@ function ActualResults() {
     <Stack direction="column">
 
     <Stack direction="row" alignItems="center" padding={2} justifyContent="space-between">
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 19:35</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 23:10</Typography>
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
     </Stack>
