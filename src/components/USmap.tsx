@@ -23,6 +23,7 @@ export const USMap: React.FC<Props> = ({predicted, isMobile, isForside}: Props) 
         // let light_red = !predicted ? "#BBBBBB": "#ff9696"
         let blue = "#0027E8";
         let red = "#FF003B";
+        console.log(predicted);
 
         return (
     <svg xmlns="http://www.w3.org/2000/svg" width={isMobile ? "340px" : (isForside ? "700px" : "540px")} viewBox="135,0 870,589">
