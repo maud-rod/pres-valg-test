@@ -79,7 +79,7 @@ function ActualResults() {
     const Oklahoma = 7;
     const Arkansas = 6;
     // const Iowa = 6;
-    // const Kansas = 6;
+    const Kansas = 6;
     const Mississippi = 6;
     // const Nevada = 6;
     const Utah = 6;
@@ -105,7 +105,7 @@ function ActualResults() {
 
   let harris_states = [DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
-  let trump_states = [Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_1, West_Virginia, ]
+  let trump_states = [Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_1, West_Virginia, ]
 
   let harris_mandates = 0
 
@@ -192,9 +192,9 @@ function ActualResults() {
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater (per 5.11.24) </Typography> } />
     </FormGroup>
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:25</Typography> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:41</Typography> 
     </Stack>  : 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:25</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:41</Typography>
     }
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
