@@ -86,7 +86,7 @@ function ActualResults() {
     const Nebraska = 2;
     const Nebraska_3 = 1;
     const Nebraska_2 = 1;
-    // const Nebraska_3 = 1;
+    const Nebraska_3 = 1;
     const New_Mexico = 5;
     const Hawaii = 4;
     const Idaho = 4;
@@ -107,7 +107,7 @@ function ActualResults() {
 
   let harris_states = [Nebraska_2, Hawaii, Virginia, New_Mexico, Oregon, California, Washington, Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
-  let trump_states = [Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
+  let trump_states = [Nebraska_3, Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
 
   let harris_mandates = 0
 
