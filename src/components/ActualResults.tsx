@@ -166,7 +166,7 @@ function ActualResults() {
   const harrisPercent = harris_overweight > 0 ? "50%" : harris_percent
 
   const defaultPage = (
-    <Stack direction="column" width={boxWidth} sx={{backgroundColor: forside ? "transparent" : "white"}}>
+    <Stack direction="column" width={boxWidth} sx={{backgroundColor: forside ? "#e5e5e5" : "white"}} padding={2}>
     {predicted ? <PredictedResults isMobile={isMobile} isForside={isForside}/> : <><Stack direction="row" width="100%" justifyContent="space-between">
         <img src={harris} alt="Harris" height={`${h}px`} width={`${w}px`}/>
         <img src={trump} alt="Trump" height={`${h}px`} width={`${w}px`}/>
@@ -192,9 +192,9 @@ function ActualResults() {
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater </Typography> } />
     </FormGroup>
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:29</Typography> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:35</Typography> 
     </Stack>  : 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:29</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:35</Typography>
     }
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
