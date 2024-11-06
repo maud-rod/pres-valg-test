@@ -3,7 +3,7 @@ import { USMap } from './USmap.tsx';
 import harris from '../Harris.png';
 import '../App.css';
 import { Box, Stack } from "@mui/system";
-import { FormGroup, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import PredictedResults from './PredictedResult.tsx';
 import { useSearchParams } from 'react-router-dom';
@@ -157,7 +157,7 @@ function ActualResults() {
       setResponse(data);
   }; */}
 
-  const [predicted, setPredicted] = useState(false);
+  const predicted = false;
 
   const h = isMobile ? 70 : 140;
   const w = 1.86*h;
