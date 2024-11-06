@@ -84,7 +84,7 @@ function ActualResults() {
     // const Nevada = 6;
     // const Utah = 6;
     const Nebraska = 2;
-    // const Nebraska_1 = 1;
+    const Nebraska_1 = 1;
     // const Nebraska_2 = 1;
     // const Nebraska_3 = 1;
     // const New_Mexico = 5;
@@ -105,7 +105,7 @@ function ActualResults() {
 
   let harris_states = [Vermont, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
-  let trump_states = [Texas, Ohio, Florida, Alabama, Mississippi, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Wyoming, West_Virginia, ]
+  let trump_states = [Texas, Ohio, Florida, Alabama, Mississippi, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_1, West_Virginia, ]
 
   let harris_mandates = 0
 
@@ -192,9 +192,9 @@ function ActualResults() {
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater </Typography> } />
     </FormGroup>
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:19</Typography> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:29</Typography> 
     </Stack>  : 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:19</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 03:29</Typography>
     }
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
