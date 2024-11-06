@@ -68,7 +68,7 @@ function ActualResults() {
 
     const Missouri = 10;
 
-    // const Wisconsin = 10;
+    const Wisconsin = 10;
 
     const Alabama = 9;
     const South_Carolina = 9;
@@ -107,7 +107,7 @@ function ActualResults() {
 
   let harris_states = [Minnesota, New_Hampshire, Nebraska_2, Hawaii, Virginia, New_Mexico, Oregon, California, Washington, Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
-  let trump_states = [Pennsylvania, Maine_dist2, Nebraska_1, Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
+  let trump_states = [Wisconsin, Pennsylvania, Maine_dist2, Nebraska_1, Georgia, North_Carolina, Idaho, Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_3, West_Virginia, ]
 
   let harris_mandates = 0
 
@@ -188,7 +188,7 @@ function ActualResults() {
     <Stack direction="column">
 
     <Stack direction="row" alignItems="center" padding={2} justifyContent="space-between">
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 08:51</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 11:51</Typography>
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
     </Stack>
