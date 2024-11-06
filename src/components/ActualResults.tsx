@@ -26,7 +26,7 @@ function ActualResults() {
 
     let isForside = forside;
 
-    // const California = 54;
+    const California = 54;
 
     const Texas = 40;
 
@@ -50,7 +50,7 @@ function ActualResults() {
 
     // const Virginia = 13;
 
-    // const Washington = 12;
+    const Washington = 12;
 
     // const Arizona = 11;
 
@@ -90,8 +90,9 @@ function ActualResults() {
     // const New_Mexico = 5;
     // const Hawaii = 4;
     // const Idaho = 4;
-    // const Maine = 4;
+    // const Maine = 2;
     const Maine_dist = 1;
+    // const Maine_dist2 = 1;
     const Montana = 4;
     // const New_Hampshire = 4;
     const Rhode_Island = 4;
@@ -104,7 +105,7 @@ function ActualResults() {
     const Vermont = 3;
     const Wyoming = 3;
 
-  let harris_states = [Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
+  let harris_states = [California, Washington, Maine_dist, DC, Vermont, Colorado, New_York, Massachusetts, Connecticut, Rhode_Island, New_Jersey, Delaware, Maryland, Illinois]
 
   let trump_states = [Iowa, Kansas, Texas, Utah, Montana, Ohio, Florida, Alabama, Mississippi, Missouri, Louisiana, Arkansas, Oklahoma, Tennessee, Kentucky, South_Carolina, Indiana, Wyoming, North_Dakota, South_Dakota, Nebraska, Nebraska_1, West_Virginia, ]
 
@@ -193,9 +194,9 @@ function ActualResults() {
     <FormControlLabel control={<Switch defaultChecked={false} onChange={() => setPredicted(prev=>!prev)}/>} label={
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Vis forventede resultater (per 5.11.24) </Typography> } />
     </FormGroup>
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:48</Typography> 
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 05:02</Typography> 
     </Stack>  : 
-    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 04:48</Typography>
+    <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Sist oppdatert 6. november, 05:02</Typography>
     }
 
     <Typography sx={{"font-family": "var(--brick-fonts-baseHeadlineS)", "color": "gray"}}> Tallgrunnlag fra <a href="https://apnews.com/projects/election-results-2024/" target="_blank">AP News</a> </Typography>    
